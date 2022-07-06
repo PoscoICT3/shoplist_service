@@ -13,7 +13,7 @@ public class RestTemplateService {
     public ShopRateDto[] getReviewResponse() {
         System.out.println("rest에 들어옴");
         URI uri = UriComponentsBuilder
-                .fromUriString("http://localhost:9001")
+                .fromUriString("http://localhost:8000")
                 .path("/review/shoprate")
                 .encode()
                 .build()
