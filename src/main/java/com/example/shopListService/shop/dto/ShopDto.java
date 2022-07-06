@@ -1,4 +1,4 @@
-package com.example.shopListService.shop.model;
+package com.example.shopListService.shop.dto;
 
 import lombok.Data;
 import org.springframework.stereotype.Component;
@@ -10,6 +10,5 @@ public class ShopDto {
     private String name;
     private String location;
     private String image;
-    private double grade;
-
+    private double rate;
 }

@@ -5,10 +5,10 @@
 
 <configuration>
     <typeAliases>
-        <package name="com.example.shopListService.shop.model"/>
+        <package name="com.example.shopListService.shop.dto"/>
     </typeAliases>
 
     <mappers>
-        <mapper resource="mapper/shopPostMapper.xml"></mapper>
+        <mapper resource="mapper/shopListRateMapper.xml"></mapper>
     </mappers>
 </configuration>

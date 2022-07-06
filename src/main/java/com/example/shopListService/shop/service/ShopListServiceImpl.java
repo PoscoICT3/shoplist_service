@@ -1,7 +1,7 @@
 package com.example.shopListService.shop.service;
 
-import com.example.shopListService.shop.model.ShopDto;
-import com.example.shopListService.shop.repository.ShopPostMapper;
+import com.example.shopListService.shop.dto.ShopDto;
+import com.example.shopListService.shop.repository.ShopListRateMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,10 +12,11 @@ import java.util.List;
 @Service
 public class ShopListServiceImpl implements ShopListService{
     @Autowired
-    ShopPostMapper shopPostMapper;
+    ShopListRateMapper shopListRateMapper;
 
     @Override
-    public List<ShopDto> getShopGrade() {
-        return shopPostMapper.getShopGrade();
+    public List<ShopDto> getShop() {
+        return shopListRateMapper.getShop();
     }
+
 }
