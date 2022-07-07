@@ -11,7 +11,7 @@ import java.net.URI;
 @Service
 public class RestTemplateService {
     public ShopRateDto[] getReviewResponse() {
-        System.out.println("rest에 들어옴");
+        //다른 포트 번호로 다른 DB에 접근해서 필요한 데이터 가져오기
         URI uri = UriComponentsBuilder
                 .fromUriString("http://localhost:8000")
                 .path("/review/shoprate")
@@ -19,16 +19,13 @@ public class RestTemplateService {
                 .build()
                 .toUri();
         RestTemplate restTemplate = new RestTemplate();
-        // status 코드와 , 바디를 같이 담아서 보낸다
-        // **반환값을 DTO를 설정해주면 좋지만, LIST객체나 아직 반환값을 정확하게 모름**
+        // getEntity() 결과값 객체 배열에 담기, getBody()에 필요한 데이터 들어 있음
         ResponseEntity<ShopRateDto[]> result = restTemplate.getForEntity(uri, ShopRateDto[].class);
         ShopRateDto[] array = result.getBody();
-
 //        for(ShopRateDto dto : array){
 //            System.out.println(dto.getShopId());
 //            System.out.println(dto.getRate());
 //        }
-
         return array;
     }
 
