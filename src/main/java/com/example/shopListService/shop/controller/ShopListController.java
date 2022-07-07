@@ -25,7 +25,6 @@ public class ShopListController {
 
     @GetMapping("/rate")
     public List<ShopDto> getShopRate(){
-        System.out.println("adlkfjlakjd");
         //shopRateRes에 review 테이블의 shopId,rate 들어옴
         ShopRateDto[] shopRateRes =restTemplateService.getReviewResponse();
         List<ShopDto> shopList = shopListService.getShop();
