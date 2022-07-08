@@ -20,5 +20,5 @@ eureka:
 mybatis:
   config-location: classpath:config/myBatis.xml
 
-file: E:\TastyMSA_SHOPLIST\shoplist_service\src\main\resources\static
+file: C:\Users\geunyeong\Desktop\shoplist_service\shoplist_service\src\main\resources\static
 
